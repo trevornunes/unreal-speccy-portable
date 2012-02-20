@@ -1,0 +1,22 @@
+PROJECT_NAME = unreal_speccy_portable
+TARGET_TYPE = exe
+UID2 = 100039CE
+UID3 = A89FAC37
+SECUREID = A89FAC37
+EPOCSTACKSIZE = 0x5000
+EPOCHEAPSIZE = 0x400000,0x800000
+CAPABILITY = NONE
+SYSINCLUDE = $(EPOCROOT)/epoc32/include $(EPOCROOT)/epoc32/include/mmf/plugin $(EPOCROOT)/epoc32/include/libc
+USERINCLUDE = 
+SRCFOLDERS = . z80 ui snapshot tools tools/zlib tools/tinyxml platform platform/symbian platform/custom_ui devices devices/fdd devices/input devices/sound 
+CXXSRCS = $(foreach dir, $(SRCFOLDERS), $(wildcard $(SRC_PATH)/$(dir)/*.cpp))
+CSRCS = $(foreach dir, $(SRCFOLDERS), $(wildcard $(SRC_PATH)/$(dir)/*.c))
+ICON_SRC = $(PROJECT_NAME)
+ICON_TARGET = $(DIST_PATH)/$(PROJECT_NAME).mbm
+IMG_ARGS = /c24
+RSS_TARGETS = $(DIST_PATH)/$(PROJECT_NAME).rsc $(DIST_PATH)/$(PROJECT_NAME)_reg.rsc
+LANG_MACRO = LANGUAGE_SC
+SYSLIBRARY = euser.lib estlib.lib avkon.lib libGLES_CM.lib eikcore.lib cone.lib apparc.lib ws32.lib fbscli.lib efsrv.lib commondialogs.lib eikcoctl.lib mediaclientaudiostream.lib remconcoreapi.lib remconinterfacebase.lib platformenv.lib charconv.lib
+
+#CERT = /c/cert/selfsigned.cer
+#KEY = /c/cert/selfsigned.key

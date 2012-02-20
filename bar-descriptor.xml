@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+<!-- BlackBerry Tablet OS application descriptor file.
+
+    Specifies parameters for identifying, installing, and launching native applications on BlackBerry Tablet OS.
+
+-->
+
+    <!-- A universally unique application identifier. Must be unique across all BlackBerry Tablet OS applications.
+         Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+    <id>com.example.specc</id>
+
+    <!-- The name that is displayed in the BlackBerry Tablet OS application installer. 
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <name>speccy</name>
+    
+    <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+         Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+         An updated version of application must have a versionNumber value higher than the previous version. Required. -->
+    <versionNumber>1.0.0</versionNumber>
+
+    <!-- Fourth digit segment of the package version. First three segments are taken from the 
+         <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
+    <buildId>1</buildId>
+                 
+    <!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+    <!-- <versionLabel></versionLabel> -->
+
+    <!-- Description, displayed in the BlackBerry Tablet OS application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+
+    <!-- Copyright information. Optional. -->
+    <!-- <copyright></copyright> -->
+
+    <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
+    <author>t</author>
+    <authorId>gYAAgOKRaqVbNM5ToziNoZFV720</authorId>
+    <splashscreen>speckeys_jpg.jpg</splashscreen>
+    <description>ZX Spectrum emulator</description>
+    
+    <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
+    <!-- <authorId>ABC1234YjsnUk235h</authorId> -->
+   
+    <initialWindow>
+        <systemChrome>none</systemChrome>
+        <transparent>false</transparent>
+    </initialWindow>
+    
+    <!--  The category where the application appears. Either core.games or core.media. -->
+    <category>core.games</category>
+    <asset path="icon.png">icon.png</asset>
+    <asset path="${workspace_loc:/SDL12/Device-Release/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
+    <asset path="${workspace_loc:/TouchControlOverlay/Device-Release/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
+    <asset path="src/res">res</asset>
+    <asset path="sdl-controls.xml">sdl-controls.xml</asset>
+    <asset path="dpad.png">dpad.png</asset>
+    <asset path="zxspectrum.png">zxspectrum.png</asset>
+    <asset path="speccy128.png">speccy128.png</asset>
+    <asset path="A.png">A.png</asset>
+    <asset path="j_key.png">j_key.png</asset>
+    <asset path="p_key.png">p_key.png</asset>
+    <asset path="enter_key.png">enter_key.png</asset>
+    <asset path="speccy48.png">speccy48.png</asset>
+    <asset path="o_key.png">o_key.png</asset>
+    <asset path="x_key.png">x_key.png</asset>
+    <asset path="z_key.png">z_key.png</asset>
+    <asset path="q_key.png">q_key.png</asset>
+    <asset path="a_key.png">a_key.png</asset>
+    <asset path="0_key.png">0_key.png</asset>
+    <asset path="1_key.png">1_key.png</asset>
+    <asset path="3_key.png">3_key.png</asset>
+    <asset path="C:/Users/Owner/Desktop/speckeys_jpg.jpg">speckeys_jpg.jpg</asset>
+    <configuration id="com.qnx.qcc.configuration.exe.debug.95298693" name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Debug/speccy" entry="true" type="Qnx/Elf">speccy</asset>
+    </configuration>
+    <configuration id="com.qnx.qcc.configuration.exe.release.1807905669" name="Device-Release">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Release/speccy" entry="true" type="Qnx/Elf">speccy</asset>
+    </configuration>
+    <configuration id="com.qnx.qcc.configuration.exe.profile.1927589034" name="Device-Profile">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Profile/speccy" entry="true" type="Qnx/Elf">speccy</asset>
+    </configuration>
+    <configuration id="com.qnx.qcc.configuration.exe.profile.coverage.1391663690" name="Device-Coverage">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Coverage/speccy" entry="true" type="Qnx/Elf">speccy</asset>
+    </configuration>
+    <configuration id="com.qnx.qcc.configuration.exe.debug.872672970" name="Simulator-Debug">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="Simulator-Debug/speccy" entry="true" type="Qnx/Elf">speccy</asset>
+    </configuration>
+    <configuration id="com.qnx.qcc.configuration.exe.profile.1848853897" name="Simulator-Profile">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="Simulator-Profile/speccy" entry="true" type="Qnx/Elf">speccy</asset>
+    </configuration>
+    <configuration id="com.qnx.qcc.configuration.exe.profile.coverage.66653041" name="Simulator-Coverage">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="Simulator-Coverage/speccy" entry="true" type="Qnx/Elf">speccy</asset>
+    </configuration>
+    
+    <!--  The icon for the application, which should be 86x86. -->
+    <icon>
+        <image>zxspectrum.png</image>
+    </icon>
+    
+    <!--  The splash screen that will appear when your application is launching. Should be 1024x600. -->
+    <!-- <splashscreen></splashscreen> -->
+
+    <!-- Request permission to execute native code.  Required for native applications. -->
+    <action system="true">run_native</action>
+    <action>access_shared</action>
+    
+    <!--  The permissions requested by your application. -->
+    <!--  <action>access_shared</action> -->
+    <!--  <action>record_audio</action> -->
+    <!--  <action>read_geolocation</action> -->
+    <!--  <action>use_camera</action> -->
+    <!--  <action>access_internet</action> -->
+    <!--  <action>play_audio</action> -->
+    <!--  <action>post_notification</action> -->
+    <!--  <action>set_audio_volume</action> -->
+    <!--  <action>read_device_identifying_information</action> -->
+
+    <!-- Ensure that shared libraries in the package are found at run-time. -->
+    <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
+    
+</qnx>

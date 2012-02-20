@@ -1,0 +1,11 @@
+#ifndef __USP_HRH__
+#define __USP_HRH__
+
+enum TMenuCommands
+{
+    EReset = 1,
+    EOpenFile,
+    EToggleTape
+};
+
+#endif//__USP_HRH__

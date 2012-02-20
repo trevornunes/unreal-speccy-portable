@@ -1,0 +1,31 @@
+;Languages
+&EN
+
+;Header
+#{"Unreal Speccy Portable"}, (0xA89FAC37), 0, 0, 30,TYPE=SA
+
+;Localised Vendor name
+%{"Vendor"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"S60ProductID"}
+
+="dist\gcce\unreal_speccy_portable.mbm", "image/x-mbm", ""
+"..\..\README"-"", FT, TC
+"..\..\LICENSE"-"", FT, TA
+;Files to install
+"dist\gcce\unreal_speccy_portable.exe"	-"!:\sys\bin\unreal_speccy_portable.exe"
+"dist\gcce\unreal_speccy_portable.rsc"	-"!:\resource\apps\unreal_speccy_portable.rsc"
+"dist\gcce\unreal_speccy_portable_reg.rsc"	-"!:\private\10003a3f\import\apps\unreal_speccy_portable_reg.rsc"
+"dist\gcce\unreal_speccy_portable.mbm"	-"!:\resource\apps\unreal_speccy_portable.mbm"
+"..\..\res\rom\sos128.rom"	-"!:\private\A89FAC37\res\rom\sos128.rom"
+"..\..\res\rom\dos513f.rom"	-"!:\private\A89FAC37\res\rom\dos513f.rom"
+"..\..\res\rom\service.rom"	-"!:\private\A89FAC37\res\rom\service.rom"
+"..\..\res\rom\sos48.rom"	-"!:\private\A89FAC37\res\rom\sos48.rom"
+"..\..\res\font\spxtrm4f.fnt" -"!:\private\A89FAC37\res\font\spxtrm4f.fnt"
+
+;required for application to be covered by backup/restore facility 
+"br.xml"	-"!:\private\A89FAC37\backup_registration.xml"

@@ -1,0 +1,17 @@
+#include <appinfo.rh>
+#include <unreal_speccy_portable.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+
+// Application UID
+UID3 0xA89FAC37 
+
+RESOURCE APP_REGISTRATION_INFO
+{
+    app_file                  = "unreal_speccy_portable";
+    localisable_resource_file = "\\resource\\apps\\unreal_speccy_portable";
+    localisable_resource_id   = R_LOCALISABLE_APP_INFO;
+
+    embeddability             = KAppNotEmbeddable;
+    newfile                   = KAppDoesNotSupportNewFile;
+}
