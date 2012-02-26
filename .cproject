@@ -85,6 +85,8 @@
 								<option id="com.qnx.qcc.option.compiler.security.760828457" name="Enhanced Security (-fstack-protector-all)" superClass="com.qnx.qcc.option.compiler.security" value="false" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.compiler.defines.1543343059" name="Defines (-D)" superClass="com.qnx.qcc.option.compiler.defines" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="_LINUX"/>
+									<listOptionValue builtIn="false" value="USE_PNG"/>
+									<listOptionValue builtIn="false" value="USE_ZIP"/>
 									<listOptionValue builtIn="false" value="_FORTIFY_SOURCE=2"/>
 									<listOptionValue builtIn="false" value="SDL_KEYS_COMMON"/>
 									<listOptionValue builtIn="false" value="USE_SDL"/>

@@ -20,6 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifdef __QNXNTO__
 #include <unistd.h>
+#include <sys/stat.h>  // mkdir
+#include <sys/types.h> // mkdir
 #endif
 
 #ifndef USE_SDL
@@ -46,7 +48,12 @@ void ProcessKey(SDL_Event& e);
 
 static bool Init()
 {
+#ifndef __QNXNTO__
 	OpLastFile("/");
+#else
+	mkdir("/accounts/1000/shared/misc/roms/zx",0777);
+	OpLastFile("/accounts/1000/shared/misc/roms/zx/");
+#endif
 	Handler()->OnInit();
     if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) < 0)
         return false;
@@ -93,7 +100,7 @@ static void Loop()
 		Handler()->OnLoop();
 		UpdateScreen();
 		UpdateAudio();
-//		SDL_Delay(5);
+    	        SDL_Delay(5);
 		if(OpQuit())
 			quit = true;
 	}
